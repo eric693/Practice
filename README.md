@@ -1,4 +1,3 @@
-# Leetcode
 # C Language Practice
 # Single Number
 
