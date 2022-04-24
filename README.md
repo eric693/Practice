@@ -66,10 +66,7 @@ bool isHappy(int n){
         history[size]=n;
         size++;
         n=next_t(n);
-    
-    
     }
-    
     return n==1;
 }
 
