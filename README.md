@@ -71,3 +71,29 @@ bool isHappy(int n){
     return n==1;
 }
 
+
+
+
+##Maximum subarray
+int maxSubArray(int* nums, int numsSize){
+    int max=INT_MIN;//目前為止最大值
+    //選擇一個起點
+    for(int i=0;i<numsSize;i++){
+        //選擇一個終點
+        for(int j=i;j<numsSize;j++){
+            //計算從起點到終點的和
+            int sum=0;
+            for(int k=i;k<=j;k++){//k=1,3,4,j
+                sum+=nums[k];
+            }
+            //如果比原本的最大值大，就換掉
+            if(sum>max){
+                max=sum;
+            }
+            //sum==nums[i]+...+nums[j];//i<=j
+    printf("%d %d : %d\n",i,j,sum);
+        
+    }
+    }
+    return max;
+}
