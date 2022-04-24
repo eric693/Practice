@@ -38,3 +38,38 @@ int main(void) {
   return 0;
 }
 
+
+## Happy Number
+int next_t(int n){
+    int r=0;
+    while (n!=0){
+        int d=n%10;
+        n/=10;
+        r+=d*d;
+    }
+    return r;
+}
+bool contains(int* history, int size,int n){//檢查n是否在history中出現過
+    for(int i=0;i<size;i++){
+        if(history[i]==n){
+            return true;
+    }
+    }
+    return false;
+}
+
+bool isHappy(int n){
+    int history[10000];//我們去過哪裡
+    int size=0;//總共有幾個地方
+    
+    while (!contains(history,size,n)){
+        history[size]=n;
+        size++;
+        n=next_t(n);
+    
+    
+    }
+    
+    return n==1;
+}
+
