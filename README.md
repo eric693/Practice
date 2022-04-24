@@ -74,7 +74,7 @@ bool isHappy(int n){
 
 
 
-##Maximum subarray
+## Maximum subarray
 int maxSubArray(int* nums, int numsSize){
     int max=INT_MIN;//目前為止最大值
     //選擇一個起點
