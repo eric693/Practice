@@ -1,5 +1,5 @@
 # C Language Practice
-# Single Number
+## Single Number
 
 int singleNumber(int* nums, int numsSize)
 {
