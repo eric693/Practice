@@ -1,5 +1,6 @@
 # Leetcode
 # C Language Practice
+# Single Number
 
 int singleNumber(int* nums, int numsSize)
 {
@@ -13,8 +14,7 @@ int singleNumber(int* nums, int numsSize)
             }
             if(count==1){
                 return nums[i];
-        }
-            
+        }           
     }
     return 0 ;    
 }
