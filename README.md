@@ -40,6 +40,7 @@ int main(void) {
 
 
 ## Happy Number
+
 int next_t(int n){
     int r=0;
     while (n!=0){
