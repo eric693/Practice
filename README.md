@@ -1,5 +1,5 @@
 # Leetcode
-C Language Practice
+# C Language Practice
 
 int singleNumber(int* nums, int numsSize)
 {
@@ -23,7 +23,6 @@ int singleNumber(int* nums, int numsSize)
 or 
 
 
-https://replit.com/@exo881222/single-number#main.c
 #include <stdio.h>
 
 int singleNumber(int* nums, int numsSize)
