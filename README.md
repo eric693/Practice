@@ -97,3 +97,24 @@ int maxSubArray(int* nums, int numsSize){
     }
     return max;
 }
+
+## First Bad Version
+// The API isBadVersion is defined for you.
+// bool isBadVersion(int version);
+long long  binarySearch(long long first,long long last){
+    
+    long long  mid=first+(last-first)/2;
+    if(isBadVersion(mid)&&!isBadVersion(mid-1)){
+        return mid;
+    }
+    if(!isBadVersion(mid)){
+        return binarySearch(mid+1,last);
+    }
+        
+        return binarySearch(first,mid);
+}
+int firstBadVersion(int n) {
+    
+    return binarySearch(1,(long long)1+n);
+   
+}
