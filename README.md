@@ -103,7 +103,7 @@ int maxSubArray(int* nums, int numsSize){
 // bool isBadVersion(int version);
 long long  binarySearch(long long first,long long last){
     
-    long long  mid=first+(last-first)/2;
+    long long  mid=first+(last-first)/2;//length:last-first
     if(isBadVersion(mid)&&!isBadVersion(mid-1)){
         return mid;
     }
@@ -114,7 +114,9 @@ long long  binarySearch(long long first,long long last){
         return binarySearch(first,mid);
 }
 int firstBadVersion(int n) {
-    
+    //[1,2,3,4,5,6,7..., n]
+    // G G G G G G B B B B
+    //ans:
     return binarySearch(1,(long long)1+n);
    
 }
