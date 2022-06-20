@@ -1,4 +1,13 @@
 # C Language Practice
+
+#面試考題：
+
+##Two sum
+##Longest Substring Without Repeating Characters
+##Longest Palindromic Substring
+##Valid Parenttheses
+##Move Zeros
+##Merge intevals
 ## Single Number
 
 int singleNumber(int* nums, int numsSize)
