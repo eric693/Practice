@@ -1,18 +1,18 @@
 # C Language Practice
 
-#面試考題：
+# 面試考題：
 
-##Two sum
+## Two sum
 
-##Longest Substring Without Repeating Characters
+## Longest Substring Without Repeating Characters
 
-##Longest Palindromic Substring
+## Longest Palindromic Substring
 
-##Valid Parenttheses
+## Valid Parenttheses
 
-##Move Zeros
+## Move Zeros
 
-##Merge intevals
+## Merge intevals
 
 ## Single Number
 
