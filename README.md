@@ -1,6 +1,6 @@
 # C Language Practice
 
-# 面試考題：
+面試考題：
 
 ## Two sum
 
