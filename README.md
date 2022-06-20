@@ -8,7 +8,7 @@
 
 ## Longest Palindromic Substring
 
-## Valid Parenttheses
+## Valid Parenthesis String
 
 ## Move Zeros
 
