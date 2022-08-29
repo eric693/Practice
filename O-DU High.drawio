@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-29T06:24:03.830Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="85O1B_1Aj0SYjQvEJqoz" version="20.2.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-08-29T06:40:24.002Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="6Yc_dgwjR1q-t3LXG2eE" version="20.2.7" type="github" pages="2">
   <diagram id="4c9493ZX0JVMc4V4SmF9" name="Page-1">
-    <mxGraphModel dx="4019" dy="1533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3231" dy="1022" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -445,9 +445,6 @@
             <mxPoint x="-1" y="2112.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="02gVL89lQie8hWmFiPp3-108" value="mac收到slot indication 把slot indication資料從mac送到sch" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="4137" y="1280" width="303" height="50" as="geometry" />
-        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
@@ -587,6 +584,9 @@
         </mxCell>
         <mxCell id="HERvtf7YILhSBkbhKdva-16" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(33, 37, 41); font-family: &amp;quot;pingfang sc&amp;quot;, &amp;quot;helvetica neue&amp;quot;, &amp;quot;microsoft yahei new&amp;quot;, &amp;quot;stheiti light&amp;quot;, sans-serif; font-size: 20px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;ssb-SubcarrierOffset, 即k_{SSB}。取值範圍是0到15，也就是4bit信息。這對於FR2來說，是足夠的, k_{SSB}的取值範圍時0到11，4bit信息足夠可以指示。但是對於FR1來說，k_{SSB} 的取值範圍是0到23，需要5bit來指示，所以除了MIB中的4bit之外，需要PBCH Payload中的1bit來共同指示&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
           <mxGeometry x="4260" y="2100" width="560" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="TkjPO-KG8ev-8ndEG0hE-1" value="mac收到slot indication 把slot indication資料從mac送到sch" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="3240" y="2700" width="303" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
