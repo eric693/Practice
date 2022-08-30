@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-30T08:00:23.280Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="pz3EgkEuG_V4uqrCondA" version="20.2.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-08-30T08:13:48.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="0upGeI2V01NuM6ZjdM8A" version="20.2.7" type="github" pages="2">
   <diagram id="4c9493ZX0JVMc4V4SmF9" name="Page-1">
-    <mxGraphModel dx="3192" dy="1533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2178" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -60,12 +60,6 @@
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-37" value="&lt;div&gt;uint8_t fapiMacSlotInd(Pst *pst, SlotTimingInfo *slotInd)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ret = ROK;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint16_t&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cellIdx;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;volatile uint32_t&amp;nbsp; &amp;nbsp; &amp;nbsp;startTime=0;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;#ifdef ODU_SLOT_IND_DEBUG_LOG&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;DU_LOG(&quot;\nDEBUG&amp;nbsp; --&amp;gt;&amp;nbsp; MAC : Slot Indication received. [%d : %d]&quot;, slotInd-&amp;gt;sfn, slotInd-&amp;gt;slot);&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/*starting Task*/&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ODU_START_TASK(&amp;amp;startTime, PID_MAC_TTI_IND);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;gSlotCount++;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(gSlotCount == 1)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp;GET_CELL_IDX(slotInd-&amp;gt;cellId, cellIdx);&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt;&amp;nbsp; &amp;nbsp;macCb.macCell[cellIdx]-&amp;gt;state = CELL_STATE_UP;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;/* When testing L2 with Intel-L1, any changes specific to&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;* timer mode testing must be guarded under INTEL_TIMER_MODE*/&lt;/div&gt;&lt;div&gt;#ifndef INTEL_TIMER_MODE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* send slot indication to scheduler */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ret = sendSlotIndMacToSch(slotInd);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(ret != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; MAC : Sending of slot ind msg from MAC to SCH failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; MAC_FREE_SHRABL_BUF(pst-&amp;gt;region, pst-&amp;gt;pool, slotInd, sizeof(SlotTimingInfo));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return ret;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ret = macProcSlotInd(*slotInd);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(ret != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; MAC : macProcSlotInd failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; MAC_FREE_SHRABL_BUF(pst-&amp;gt;region, pst-&amp;gt;pool, slotInd, sizeof(SlotTimingInfo));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return ret;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="3432" y="1050" width="318" height="657" as="geometry" />
-        </mxCell>
-        <mxCell id="p64wqYi4TbKfhQqd9-dO-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2899" y="2910" as="sourcePoint" />
-            <mxPoint x="2899" y="2950" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-167" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-41" target="p64wqYi4TbKfhQqd9-dO-42" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -503,7 +497,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="5uXe-T7UVIPcnLjXYHll" name="Page-2">
-    <mxGraphModel dx="1526" dy="-498" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2703" dy="582" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
