@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-30T03:39:01.430Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="kPYc8ESARCS3Mtcvktkz" version="20.2.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-08-30T03:54:01.048Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="K-02pBFG-DNaNCdFxhst" version="20.2.7" type="github" pages="2">
   <diagram id="4c9493ZX0JVMc4V4SmF9" name="Page-1">
-    <mxGraphModel dx="2811" dy="872" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2719" dy="1226" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,19 +14,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-17" value="&lt;div&gt;#ifdef NR_TDD&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;memcpy(&amp;amp;schCellCfg.tddCfg, &amp;amp;macCellCfg-&amp;gt;tddCfg, sizeof(TDDCfg));&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;FILL_PST_MAC_TO_SCH(cfgPst, EVENT_SCH_CELL_CFG);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ret = (*SchCellCfgOpts[cfgPst.selector])(&amp;amp;cfgPst, &amp;amp;schCellCfg);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return ret;&lt;/div&gt;&lt;div&gt;} /* end of MacSchCellCfgReq */&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-69.98000000000002" y="3183" width="350" height="220" as="geometry" />
+          <mxGeometry x="169.99999999999997" y="3220" width="350" height="220" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-85" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-19" target="p64wqYi4TbKfhQqd9-dO-20" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-19" value="&lt;div&gt;SchCellCfgFunc SchCellCfgOpts[] =&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;packSchCellCfg,&amp;nbsp; &amp;nbsp;/* packing for loosely coupled */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;SchHdlCellCfgReq, /* packing for tightly coupled */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;packSchCellCfg&amp;nbsp; &amp;nbsp; /* packing for light weight loosly coupled */&lt;/div&gt;&lt;div&gt;};&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-69.98000000000002" y="3448" width="350" height="100" as="geometry" />
+          <mxGeometry x="169.99999999999997" y="3485" width="350" height="100" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-216" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-20" target="p64wqYi4TbKfhQqd9-dO-69" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-20" value="&lt;div&gt;uint8_t SchHdlCellCfgReq(Pst *pst, SchCellCfg *schCellCfg)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t ret = ROK;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;SchCellCb *cellCb;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;SchCellCfgCfm schCellCfgCfm;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Pst rspPst;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Inst inst = pst-&amp;gt;dstInst-1;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t coreset0Idx = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t numRbs = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t offset = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t freqDomainResource[FREQ_DOM_RSRC_SIZE] = {0};&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;SchPdschConfig pdschCfg;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-69.98000000000002" y="3603" width="350" height="190" as="geometry" />
+          <mxGeometry x="169.99999999999997" y="3640" width="350" height="190" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-21" value="&lt;div&gt;uint8_t tst(void)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;init_log();&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;#ifdef O1_ENABLE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(start_O1_module() != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return RFAILED;&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;//Initialize TAPA layers&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(duInit() != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return RFAILED;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;//Read all the configs from du_utils.c into duCfgParams&lt;/div&gt;&lt;div&gt;#ifndef O1_ENABLE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;duReadCfg();&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;#ifdef O1_ENABLE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;//Send VES PNF registration message to SMO&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sendPnfRegistration();&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return ROK;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;}/* end of main()*/&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="1220" y="460" width="320" height="410" as="geometry" />
@@ -63,33 +63,33 @@
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2952" y="2843" as="sourcePoint" />
-            <mxPoint x="2952" y="2883" as="targetPoint" />
+            <mxPoint x="2899" y="2910" as="sourcePoint" />
+            <mxPoint x="2899" y="2950" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-167" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-41" target="p64wqYi4TbKfhQqd9-dO-42" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-41" value="&lt;div&gt;/* Check for SSB occassion */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;dlBrdcstAlloc-&amp;gt;ssbTrans = schCheckSsbOcc(cell, dlSchedInfo.schSlotValue.broadcastTime);&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(dlBrdcstAlloc-&amp;gt;ssbTrans)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if(schBroadcastSsbAlloc(cell, dlSchedInfo.schSlotValue.broadcastTime, dlBrdcstAlloc) != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; SCH : schBroadcastSsbAlloc failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;dlBrdcstAlloc-&amp;gt;ssbTrans = NO_TRANSMISSION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; else&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;dlSchedInfo.isBroadcastPres = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if((dlBrdcstAlloc-&amp;gt;ssbTrans == NEW_TRANSMISSION) &amp;amp;&amp;amp; (!cell-&amp;gt;firstSsbTransmitted))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cell-&amp;gt;firstSsbTransmitted = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="2671" y="2493" width="320" height="320" as="geometry" />
+          <mxGeometry x="2618" y="2560" width="320" height="320" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-42" value="&lt;div&gt;PduTxOccsaion schCheckSsbOcc(SchCellCb *cell, SlotTimingInfo slotTime)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint8_t&amp;nbsp; ssb_rep;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ssb_rep = cell-&amp;gt;cellCfg.ssbSchCfg.ssbPeriod;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* Identify SSB ocassion*/&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if ((slotTime.sfn % SCH_MIB_TRANS == 0) &amp;amp;&amp;amp; (slotTime.slot ==0))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return NEW_TRANSMISSION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;else if(cell-&amp;gt;firstSsbTransmitted)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if((ssb_rep == 5) &amp;amp;&amp;amp; ((slotTime.slot == 0 || slotTime.slot == 10)))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return REPEATITION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; else if((slotTime.sfn % (ssb_rep/10) == 0) &amp;amp;&amp;amp; slotTime.slot == 0)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return REPEATITION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* not SSB occassion */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return NO_TRANSMISSION;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="2630" y="2853" width="400" height="360" as="geometry" />
+          <mxGeometry x="2577" y="2920" width="400" height="360" as="geometry" />
         </mxCell>
         <mxCell id="r4X2yyLpeVK5fe2NzzSv-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-44" target="r4X2yyLpeVK5fe2NzzSv-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-44" value="&lt;div&gt;/* Select first UE in the linked list to be scheduled next */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;pendingUeNode = cell-&amp;gt;ueToBeScheduled.first;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(pendingUeNode)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if(pendingUeNode-&amp;gt;node)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ueId = *(uint8_t *)(pendingUeNode-&amp;gt;node);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;/* If RAR is pending for this UE, schedule PDCCH,PDSCH to send RAR and&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; * PUSCH to receive MSG3 as per k0-k2 configuration*/&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if(cell-&amp;gt;raReq[ueId-1] != NULLP)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; isRarPending = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; isRarScheduled = schProcessRaReq(cell, *slotInd, ueId);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3810" y="2483" width="460" height="300" as="geometry" />
+          <mxGeometry x="3757" y="2550" width="460" height="300" as="geometry" />
         </mxCell>
         <mxCell id="r4X2yyLpeVK5fe2NzzSv-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-46" target="p64wqYi4TbKfhQqd9-dO-148">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-46" value="&lt;div&gt;/* If MSG4 is pending for this UE, schedule PDCCH,PDSCH to send MSG4 and&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; * PUCCH to receive UL msg as per k0-k1 configuration&amp;nbsp; */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if(cell-&amp;gt;raCb[ueId-1].msg4recvd)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; isMsg4Pending = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; isMsg4Scheduled = schProcessMsg4Req(cell, *slotInd, ueId);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if(isRarPending || isMsg4Pending)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3810" y="3560" width="460" height="150" as="geometry" />
+          <mxGeometry x="3757" y="3627" width="460" height="150" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-47" value="&lt;div&gt;/* Send msg to MAC */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ret = sendDlAllocToMac(&amp;amp;dlSchedInfo, schInst);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(ret != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; SCH : Sending DL Broadcast allocation from SCH to MAC failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return (ret);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schInitDlSlot(cell-&amp;gt;schDlSlotInfo[slot]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schUlResAlloc(cell, schInst);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return ret;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3810" y="3925" width="460" height="240" as="geometry" />
+          <mxGeometry x="3757" y="3992" width="460" height="240" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-89" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-48" target="p64wqYi4TbKfhQqd9-dO-15" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -101,7 +101,7 @@
           <mxGeometry x="-125" y="713" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-65" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;sch.c&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="125.01999999999998" y="3560" width="150" height="40" as="geometry" />
+          <mxGeometry x="365" y="3597" width="150" height="40" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-66" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;du_mgr_main.c&lt;/font&gt;" style="text;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="1335" y="420" width="90" height="40" as="geometry" />
@@ -110,7 +110,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-69" value="&lt;div&gt;/* Fill K0 - K1 table for common cfg*/&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;BuildK0K1Table(cellCb, &amp;amp;cellCb-&amp;gt;cellCfg.schInitialDlBwp.k0K1InfoTbl, true, cellCb-&amp;gt;cellCfg.schInitialDlBwp.pdschCommon,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;pdschCfg, DEFAULT_UL_ACK_LIST_COUNT, defaultUlAckTbl);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;BuildK2InfoTable(cellCb, cellCb-&amp;gt;cellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList,\&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;cellCb-&amp;gt;cellCfg.schInitialUlBwp.puschCommon.numTimeDomRsrcAlloc, &amp;amp;cellCb-&amp;gt;cellCfg.schInitialUlBwp.msg3K2InfoTbl, \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;amp;cellCb-&amp;gt;cellCfg.schInitialUlBwp.k2InfoTbl);&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-239.98000000000002" y="3833" width="690" height="120" as="geometry" />
+          <mxGeometry x="0.4599999999999432" y="3870" width="690" height="120" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-71" value="&lt;div&gt;typedef struct pst&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;ProcId dstProcId; /* destination processor ID */&lt;/div&gt;&lt;div&gt;ProcId srcProcId; /* source processor ID */&lt;/div&gt;&lt;div&gt;Ent dstEnt; /* destination entity */&lt;/div&gt;&lt;div&gt;Inst dstInst; /* destination instance */&lt;/div&gt;&lt;div&gt;Ent srcEnt; /* source entity */&lt;/div&gt;&lt;div&gt;Inst srcInst; /* source instance */&lt;/div&gt;&lt;div&gt;Prior prior; /* priority */&lt;/div&gt;&lt;div&gt;Route route; /* route */&lt;/div&gt;&lt;div&gt;Event event; /* event */&lt;/div&gt;&lt;div&gt;Region region; /* region */&lt;/div&gt;&lt;div&gt;Pool pool; /* pool */&lt;/div&gt;&lt;div&gt;Selector selector; /* selector */&lt;/div&gt;&lt;div&gt;uint16_t spare1; /* spare for alignment */&lt;/div&gt;&lt;div&gt;} Pst;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="80" y="413" width="320" height="250" as="geometry" />
@@ -152,7 +152,7 @@
           <mxGeometry x="2972" y="2143" width="320" height="200" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-104" value="sch_slot_ind.c" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
-          <mxGeometry x="4070" y="2433" width="230" height="50" as="geometry" />
+          <mxGeometry x="4017" y="2500" width="230" height="50" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-111" value="sch_slot_ind.c" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="3257" y="2353" width="150" height="50" as="geometry" />
@@ -164,7 +164,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-113" value="&lt;div&gt;&amp;nbsp; &amp;nbsp;/* fill ssb scheduler parameters */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.ssbSchCfg.ssbPbchPwr = macCellCfg-&amp;gt;ssbCfg.ssbPbchPwr;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.ssbSchCfg.scsCommon = macCellCfg-&amp;gt;ssbCfg.scsCmn;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.ssbSchCfg.ssbOffsetPointA = macCellCfg-&amp;gt;ssbCfg.ssbOffsetPointA;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.ssbSchCfg.ssbPeriod = ssbPeriodicity[macCellCfg-&amp;gt;ssbCfg.ssbPeriod];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.ssbSchCfg.ssbSubcOffset = macCellCfg-&amp;gt;ssbCfg.ssbScOffset;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;for(ssbMaskIdx=0; ssbMaskIdx&amp;lt;SSB_MASK_SIZE; ssbMaskIdx++)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; schCellCfg.ssbSchCfg.nSSBMask[ssbMaskIdx] = macCellCfg-&amp;gt;ssbCfg.ssbMask[ssbMaskIdx];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-320.97" y="1353" width="562" height="180" as="geometry" />
+          <mxGeometry x="-320.97" y="1353" width="562" height="177" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-194" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-116" target="p64wqYi4TbKfhQqd9-dO-193" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -181,13 +181,13 @@
         <mxCell id="p64wqYi4TbKfhQqd9-dO-140" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-118" target="p64wqYi4TbKfhQqd9-dO-127" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="3232" y="2473" />
-              <mxPoint x="3232" y="2473" />
+              <mxPoint x="3179" y="2540" />
+              <mxPoint x="3179" y="2540" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-118" value="schProcessSlotInd()" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="3142" y="2403" width="180" height="30" as="geometry" />
+          <mxGeometry x="3089" y="2470" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-121" value="" style="endArrow=none;html=1;rounded=0;fontSize=18;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -218,47 +218,47 @@
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-126" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="p64wqYi4TbKfhQqd9-dO-127" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="3236" y="2853" as="targetPoint" />
+            <mxPoint x="3183" y="2920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-127" value="&lt;div&gt;/* Check for SIB1 occassion */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;dlBrdcstAlloc-&amp;gt;sib1Trans = schCheckSib1Occ(cell, dlSchedInfo.schSlotValue.broadcastTime);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(dlBrdcstAlloc-&amp;gt;sib1Trans)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if(schBroadcastSib1Alloc(cell, dlSchedInfo.schSlotValue.broadcastTime, dlBrdcstAlloc) != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; SCH : schBroadcastSib1Alloc failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;dlBrdcstAlloc-&amp;gt;sib1Trans = NO_TRANSMISSION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; else&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;dlSchedInfo.isBroadcastPres = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if((dlBrdcstAlloc-&amp;gt;sib1Trans == NEW_TRANSMISSION) &amp;amp;&amp;amp; (!cell-&amp;gt;firstSib1Transmitted))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cell-&amp;gt;firstSib1Transmitted = true;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3076" y="2493" width="320" height="320" as="geometry" />
+          <mxGeometry x="3023" y="2560" width="320" height="320" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-128" value="&lt;div&gt;PduTxOccsaion schCheckSib1Occ(SchCellCb *cell, SlotTimingInfo slotTime)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* Identify SIB1 occasions */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if((slotTime.sfn % SCH_SIB1_TRANS == 0) &amp;amp;&amp;amp; (slotTime.slot ==0))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return NEW_TRANSMISSION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;else if(cell-&amp;gt;firstSib1Transmitted)&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if((slotTime.sfn % (cell-&amp;gt;cellCfg.sib1SchCfg.sib1RepetitionPeriod/10) == 0) &amp;amp;&amp;amp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; (slotTime.slot == 0))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return REPEATITION;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* not SIB1 occassion */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return NO_TRANSMISSION;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3044" y="2853" width="456" height="360" as="geometry" />
+          <mxGeometry x="2991" y="2920" width="456" height="360" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-136" value="" style="endArrow=none;html=1;rounded=0;fontSize=18;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2850" y="2413" as="sourcePoint" />
-            <mxPoint x="3140" y="2413" as="targetPoint" />
+            <mxPoint x="2797" y="2480" as="sourcePoint" />
+            <mxPoint x="3087" y="2480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-137" value="" style="endArrow=classic;html=1;rounded=0;fontSize=18;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2851" y="2417" as="sourcePoint" />
-            <mxPoint x="2851" y="2497" as="targetPoint" />
+            <mxPoint x="2798" y="2484" as="sourcePoint" />
+            <mxPoint x="2798" y="2564" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-146" value="" style="endArrow=classic;html=1;rounded=0;fontSize=18;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="4041.4699999999993" y="2427" as="sourcePoint" />
-            <mxPoint x="4041.4699999999993" y="2486" as="targetPoint" />
+            <mxPoint x="3988.4699999999993" y="2494" as="sourcePoint" />
+            <mxPoint x="3988.4699999999993" y="2553" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="4041" y="2413" />
+              <mxPoint x="3988" y="2480" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-147" value="" style="endArrow=none;html=1;rounded=0;fontSize=18;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="p64wqYi4TbKfhQqd9-dO-118" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="3540" y="2663" as="sourcePoint" />
-            <mxPoint x="4040" y="2413" as="targetPoint" />
+            <mxPoint x="3487" y="2730" as="sourcePoint" />
+            <mxPoint x="3987" y="2480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ehJyK93_OTUoFgQRDIga-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-148" target="p64wqYi4TbKfhQqd9-dO-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-148" value="&lt;div&gt;&amp;nbsp;/* If RAR or MSG is successfully scheduled then&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;* remove UE from linked list since no pending msgs for this UE */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(isRarScheduled || isMsg4Scheduled)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;SCH_FREE(pendingUeNode-&amp;gt;node, sizeof(uint8_t));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;deleteNodeFromLList(&amp;amp;cell-&amp;gt;ueToBeScheduled, pendingUeNode);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3810" y="3748" width="460" height="130" as="geometry" />
+          <mxGeometry x="3757" y="3815" width="460" height="130" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-155" value="du_cfg.c" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="1398" y="880" width="90" height="40" as="geometry" />
@@ -313,14 +313,14 @@
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-188" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-184" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="105.01999999999998" y="4123" as="targetPoint" />
+            <mxPoint x="345.46" y="4160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-184" value="&lt;div&gt;&amp;nbsp;/* derive the SIB1 config parameters */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;fillSchSib1Cfg(schCellCfg-&amp;gt;numerology, schCellCfg-&amp;gt;bandwidth, cellCb-&amp;gt;numSlots,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt; &amp;amp;(schCellCfg-&amp;gt;sib1SchCfg), schCellCfg-&amp;gt;phyCellId,&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;&quot;&gt; &lt;/span&gt; schCellCfg-&amp;gt;ssbSchCfg.ssbOffsetPointA);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;memcpy(&amp;amp;cellCb-&amp;gt;cellCfg, schCellCfg, sizeof(SchCellCfg));&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-239.98000000000002" y="3993" width="690" height="90" as="geometry" />
+          <mxGeometry x="0.4599999999999432" y="4030" width="690" height="90" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-190" value="&lt;div&gt;&amp;nbsp;/* Fill and send Cell config confirm */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;memset(&amp;amp;rspPst, 0, sizeof(Pst));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;FILL_PST_SCH_TO_MAC(rspPst, pst-&amp;gt;dstInst);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;rspPst.event = EVENT_SCH_CELL_CFG_CFM;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfgCfm.cellId = schCellCfg-&amp;gt;cellId;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfgCfm.rsp = RSP_OK;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ret = (*SchCellCfgCfmOpts[rspPst.selector])(&amp;amp;rspPst, &amp;amp;schCellCfgCfm);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return ret;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="-235" y="4120.5" width="690" height="190" as="geometry" />
+          <mxGeometry x="5.439999999999961" y="4157.5" width="690" height="190" as="geometry" />
         </mxCell>
         <mxCell id="02gVL89lQie8hWmFiPp3-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-193" target="02gVL89lQie8hWmFiPp3-33">
           <mxGeometry relative="1" as="geometry" />
@@ -334,7 +334,7 @@
         <mxCell id="p64wqYi4TbKfhQqd9-dO-209" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;macProcSlotInd&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="3860" y="1463" width="110" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="02gVL89lQie8hWmFiPp3-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-220" target="p64wqYi4TbKfhQqd9-dO-17">
+        <mxCell id="FEkz8eaZDI-MXmy_pDGx-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="p64wqYi4TbKfhQqd9-dO-220" target="p64wqYi4TbKfhQqd9-dO-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-220" value="&lt;div style=&quot;&quot;&gt;&lt;div&gt;/* fill initial UL BWP */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.schInitialUlBwp.bwp.freqAlloc.startPrb = macCellCfg-&amp;gt;initialUlBwp.bwp.firstPrb;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.schInitialUlBwp.bwp.freqAlloc.numPrb = macCellCfg-&amp;gt;initialUlBwp.bwp.numPrb;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.schInitialUlBwp.bwp.scs = macCellCfg-&amp;gt;initialUlBwp.bwp.scs;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.schInitialUlBwp.bwp.cyclicPrefix = macCellCfg-&amp;gt;initialUlBwp.bwp.cyclicPrefix;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;schCellCfg.schInitialUlBwp.puschCommon.numTimeDomRsrcAlloc = \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; macCellCfg-&amp;gt;initialUlBwp.puschCommon.numTimeDomRsrcAlloc;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;for(rsrcListIdx = 0; rsrcListIdx &amp;lt; macCellCfg-&amp;gt;initialUlBwp.puschCommon.numTimeDomRsrcAlloc; rsrcListIdx++)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; schCellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].k2 =&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;macCellCfg-&amp;gt;initialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].k2;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; schCellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].mappingType =&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;macCellCfg-&amp;gt;initialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].mappingType;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; schCellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].startSymbol =&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;macCellCfg-&amp;gt;initialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].startSymbol;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; schCellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].symbolLength =&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;macCellCfg-&amp;gt;initialUlBwp.puschCommon.timeDomRsrcAllocList[rsrcListIdx].symbolLength;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
@@ -388,7 +388,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="02gVL89lQie8hWmFiPp3-33" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;div&gt;/* SIB1 Params */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;memset(&amp;amp;sib1.plmn, 0, sizeof(Plmn));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.plmn.mcc[0] = PLMN_MCC0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.plmn.mcc[1] = PLMN_MCC1;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.plmn.mcc[2] = PLMN_MCC2;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.plmn.mnc[0] = PLMN_MNC0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.plmn.mnc[1] = PLMN_MNC1;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.ranac = DU_RANAC;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;#ifdef O1_ENABLE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.tac =&amp;nbsp; cellParams.nRTAC;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.cellIdentity =&amp;nbsp; CELL_IDENTITY *&amp;nbsp; cellParams.cellLocalId;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\n*********DEBUG --&amp;gt; DU_APP: readCfg(): OAM CellLocalId=%d&quot;, \&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; sib1.cellIdentity);&lt;/div&gt;&lt;div&gt;#else&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.tac = DU_TAC;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.cellIdentity = CELL_IDENTITY * NR_CELL_ID;&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.cellResvdForOpUse = PLMN_IdentityInfo__cellReservedForOperatorUse_notReserved;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.connEstFailCnt = ConnEstFailureControl__connEstFailCount_n3;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.connEstFailOffValidity = ConnEstFailureControl__connEstFailOffsetValidity_s120;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.siSchedInfo.winLen = SI_SchedulingInfo__si_WindowLength_s5;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.siSchedInfo.broadcastSta = SchedulingInfo__si_BroadcastStatus_broadcasting;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.siSchedInfo.preiodicity = SchedulingInfo__si_Periodicity_rf8;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.siSchedInfo.sibType = SIB_TypeInfo__type_sibType2;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;sib1.siSchedInfo.sibValTag = SIB1_VALUE_TAG;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="695.44" y="1520" width="789.12" height="445" as="geometry" />
+          <mxGeometry x="812.9200000000001" y="1513" width="554.56" height="445" as="geometry" />
         </mxCell>
         <mxCell id="02gVL89lQie8hWmFiPp3-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="02gVL89lQie8hWmFiPp3-78" target="02gVL89lQie8hWmFiPp3-32">
           <mxGeometry relative="1" as="geometry" />
@@ -397,13 +397,13 @@
           <mxGeometry x="716.01" y="2740" width="748.37" height="110" as="geometry" />
         </mxCell>
         <mxCell id="r4X2yyLpeVK5fe2NzzSv-1" value="pendingUENode在做random access，會有個linked list，哪些人要做msg2的RAR，有無UE等待這些msg，從linked list一個一個拉出來做處理" style="text;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="1">
-          <mxGeometry x="4280" y="2597.5" width="380" height="50" as="geometry" />
+          <mxGeometry x="4227" y="2664.5" width="380" height="50" as="geometry" />
         </mxCell>
         <mxCell id="r4X2yyLpeVK5fe2NzzSv-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="r4X2yyLpeVK5fe2NzzSv-2" target="p64wqYi4TbKfhQqd9-dO-46">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="r4X2yyLpeVK5fe2NzzSv-2" value="&lt;div&gt;&lt;div&gt;/* Calculating time frame to send DCI for RAR */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;ADD_DELTA_TO_TIME(currTime, dciTime, PHY_DELTA_DL + SCHED_DELTA);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;dciSlot = dciTime.slot;&lt;/div&gt;&lt;div&gt;#ifdef NR_TDD&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* Consider this slot for sending DCI, only if it is a DL slot */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(schGetSlotSymbFrmt(dciSlot, cell-&amp;gt;slotFrmtBitMap) == DL_SLOT)&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; /* If PDCCH is already scheduled on this slot, cannot schedule PDSCH for another UE here. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if(cell-&amp;gt;schDlSlotInfo[dciSlot]-&amp;gt;pdcchUe != 0)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;return false;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; /* Check if this slot is within RA response window */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; windowStatus = isInRaRspWindow(cell-&amp;gt;raReq[ueId-1], dciTime, cell-&amp;gt;numSlots);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; if(windowStatus == WITHIN_WINDOW)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;/div&gt;&lt;div&gt;/* For all k0 values, search for a suitable k2 value to schedule MSG3.&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; * RAR DCI, RAR PDSCH and MSG3 is scheduled only if one such k0-k2 combination&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; * is found. Else no scheduling happens.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;for(k0TblIdx = 0; k0TblIdx &amp;lt; k0K1InfoTbl-&amp;gt;k0k1TimingInfo[dciSlot].numK0; k0TblIdx++)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; k0Index = k0K1InfoTbl-&amp;gt;k0k1TimingInfo[dciSlot].k0Indexes[k0TblIdx].k0Index;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; k0 = cell-&amp;gt;cellCfg.schInitialDlBwp.pdschCommon.timeDomRsrcAllocList[k0Index].k0;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Calculating time frame to send RAR PDSCH */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ADD_DELTA_TO_TIME(dciTime, rarTime, k0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; rarSlot = rarTime.slot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* If PDSCH is already scheduled on this slot, cannot schedule PDSCH for another UE here. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(cell-&amp;gt;schDlSlotInfo[rarSlot]-&amp;gt;pdschUe != 0)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;continue;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for(k2TblIdx = 0; k2TblIdx &amp;lt; msg3K2InfoTbl-&amp;gt;k2TimingInfo[rarSlot].numK2; k2TblIdx++)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;k2Index = msg3K2InfoTbl-&amp;gt;k2TimingInfo[rarSlot].k2Indexes[k2TblIdx];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;k2 = cell-&amp;gt;cellCfg.schInitialUlBwp.puschCommon.timeDomRsrcAllocList[k2Index].k2;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;/* Delta is added to the slot allocation for msg3 */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;k2 = k2 + msg3Delta;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;if(k2 &amp;gt;= msg3MinSchTime)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; ADD_DELTA_TO_TIME(rarTime, msg3Time, k2);&lt;/div&gt;&lt;div&gt;#ifdef NR_TDD&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if(schGetSlotSymbFrmt(msg3Time.slot % totalCfgSlot, cell-&amp;gt;slotFrmtBitMap) == DL_SLOT)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;continue;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="3750" y="2832.5" width="580" height="677.5" as="geometry" />
+          <mxGeometry x="3697" y="2899.5" width="580" height="677.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
