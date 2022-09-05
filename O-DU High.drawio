@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-30T08:13:48.247Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="0upGeI2V01NuM6ZjdM8A" version="20.2.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-09-05T04:29:13.504Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="y_Z7WAdUtz2OKCMHWy_l" version="20.2.7" type="github" pages="2">
   <diagram id="4c9493ZX0JVMc4V4SmF9" name="Page-1">
-    <mxGraphModel dx="2178" dy="876" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2728" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -113,7 +113,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-72" value="&lt;div&gt;uint8_t procSlotInd(fapi_slot_ind_t *fapiSlotInd)&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* fill Pst structure to send to lwr_mac to MAC */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Pst pst;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;uint16_t ret = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;SlotTimingInfo *slotInd = {0};&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;MAC_ALLOC_SHRABL_BUF(slotInd, sizeof(SlotTimingInfo));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(slotInd)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; slotInd-&amp;gt;cellId = lwrMacCb.cellCb[0].cellId;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; slotInd-&amp;gt;sfn = fapiSlotInd-&amp;gt;sfn;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; slotInd-&amp;gt;slot = fapiSlotInd-&amp;gt;slot;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; FILL_PST_LWR_MAC_TO_MAC(pst, EVENT_SLOT_IND_TO_MAC);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; pst.selector = ODU_SELECTOR_LWLC;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ret = (*sendSlotIndOpts[pst.selector])(&amp;amp;pst, slotInd);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;else&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; LWR_MAC: Memory allocation failed in procSlotInd&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; ret = RFAILED;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;return ret;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
-          <mxGeometry x="3432" y="413" width="320" height="430" as="geometry" />
+          <mxGeometry x="3362" y="413" width="458" height="430" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-73" value="lwr_mac_handle_phy.c" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="3492" y="363" width="220" height="50" as="geometry" />
@@ -322,7 +322,7 @@
         <mxCell id="p64wqYi4TbKfhQqd9-dO-193" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;div&gt;#ifndef O1_ENABLE&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* Note: Added these below variable for local testing*/&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Snssai snssai[NUM_OF_SUPPORTED_SLICE] = {{1,{2,3,4}},{5,{6,7,8}}};&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="879.8" y="1400" width="420" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="p64wqYi4TbKfhQqd9-dO-208" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;send slot indication to schedule&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
+        <mxCell id="p64wqYi4TbKfhQqd9-dO-208" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;sendSlotIndMacToSch&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
           <mxGeometry x="3190" y="1474.5" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-209" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(248, 249, 250); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;macProcSlotInd&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=18;" parent="1" vertex="1">
@@ -338,7 +338,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-227" value="&lt;div style=&quot;text-align: start;&quot;&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;/* Mib Params */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.sysFrmNum = SYS_FRAME_NUM;&lt;/div&gt;&lt;div&gt;#ifdef NR_TDD&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.subCarrierSpacingCommon = MIB__subCarrierSpacingCommon_scs30or120;&lt;/div&gt;&lt;div&gt;#else&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.subCarrierSpacingCommon = MIB__subCarrierSpacingCommon_scs15or60;&lt;/div&gt;&lt;div&gt;#endif&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.ssb_SubcarrierOffset = SSB_SC_OFFSET; //Kssb&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.dmrs_TypeA_Position = MIB__dmrs_TypeA_Position_pos2;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.controlResourceSetZero = CORESET_0_INDEX;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.searchSpaceZero = SEARCHSPACE_0_INDEX;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.cellBarred = MIB__cellBarred_notBarred;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;mib.intraFreqReselection =&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; MIB__intraFreqReselection_notAllowed;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;duCfgParam.mibParams = mib;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="910.31" y="1910" width="359" height="300" as="geometry" />
+          <mxGeometry x="832.47" y="1900" width="514.65" height="300" as="geometry" />
         </mxCell>
         <mxCell id="p64wqYi4TbKfhQqd9-dO-231" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=18;" parent="1" source="p64wqYi4TbKfhQqd9-dO-178" target="p64wqYi4TbKfhQqd9-dO-178" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -397,101 +397,80 @@
           <mxGeometry x="3697" y="2890" width="580" height="420" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-3" value="schCellCfg.ssbSchCfg()&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="1723" width="160" height="39" as="geometry" />
+          <mxGeometry x="-590" y="2003" width="160" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-4" target="FEkz8eaZDI-MXmy_pDGx-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-4" value="schCellCfg.sib1SchCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="1400" width="160" height="39" as="geometry" />
+          <mxGeometry x="-590" y="1680" width="160" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-5" target="FEkz8eaZDI-MXmy_pDGx-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-5" value="schCellCfg.schRachCfg&lt;span style=&quot;background-color: initial; text-align: center;&quot;&gt;()&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="1480" width="160" height="39" as="geometry" />
+          <mxGeometry x="-590" y="1760" width="160" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-6" target="FEkz8eaZDI-MXmy_pDGx-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-6" value="schCellCfg.schInitialDlBwp()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="1560" width="160" height="39" as="geometry" />
+          <mxGeometry x="-590" y="1840" width="160" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-7" target="FEkz8eaZDI-MXmy_pDGx-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-7" value="schCellCfg.schInitialUlBwp()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="-760" y="1640" width="160" height="39" as="geometry" />
-        </mxCell>
-        <mxCell id="FEkz8eaZDI-MXmy_pDGx-15" value="&lt;div&gt;uint8_t duReadCfg()&lt;/div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Pst pst;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;Buffer *mBuf;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;memset(&amp;amp;duCfgParam, 0, sizeof(DuCfgParams));&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;//Read configs into duCfgParams&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;if(readCfg() != ROK)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; DU_LOG(&quot;\nERROR&amp;nbsp; --&amp;gt;&amp;nbsp; DU_APP : Reading configuration failed&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; return RFAILED;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;}&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="1930" y="500" width="320" height="250" as="geometry" />
-        </mxCell>
-        <mxCell id="FEkz8eaZDI-MXmy_pDGx-16" value="" style="endArrow=classic;html=1;rounded=0;fontSize=18;exitX=0;exitY=0.56;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-15">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="1450" y="850" as="sourcePoint" />
-            <mxPoint x="1790" y="640" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FEkz8eaZDI-MXmy_pDGx-17" value="readCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="1630" y="620" width="160" height="39" as="geometry" />
-        </mxCell>
-        <mxCell id="FEkz8eaZDI-MXmy_pDGx-20" value="" style="endArrow=classic;html=1;rounded=0;fontSize=18;exitX=0;exitY=0.56;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2250" y="638.5" as="sourcePoint" />
-            <mxPoint x="2380" y="638.5" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FEkz8eaZDI-MXmy_pDGx-21" value="readMacCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
-          <mxGeometry x="2380" y="620" width="160" height="39" as="geometry" />
+          <mxGeometry x="-590" y="1920" width="160" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-25" target="FEkz8eaZDI-MXmy_pDGx-32">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-25" value="duCfgParam.macCellCfg.dlCarrCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2320" y="1400" width="209" height="39" as="geometry" />
+          <mxGeometry x="1805.5" y="3760" width="209" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-32">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2424.5" y="1560" as="targetPoint" />
+            <mxPoint x="1910" y="3920" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-32" value="duCfgParam.macCellCfg.ulCarrCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2320" y="1480" width="209" height="39" as="geometry" />
+          <mxGeometry x="1805.5" y="3840" width="209" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-34" target="FEkz8eaZDI-MXmy_pDGx-40">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-34" value="&amp;nbsp;duCfgParam.macCellCfg.ssbCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2321" y="1643" width="209" height="39" as="geometry" />
+          <mxGeometry x="1806.49" y="4003" width="209" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-56" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-35" target="FEkz8eaZDI-MXmy_pDGx-34">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-35" value="duCfgParam.macCellCfg.tddCfg()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2320" y="1560" width="209" height="39" as="geometry" />
+          <mxGeometry x="1805.5" y="3920" width="209" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-36" value="duCfgParam.macCellCfg.rssiUnit()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2320" y="1800" width="209" height="39" as="geometry" />
+          <mxGeometry x="1805.49" y="4160" width="209" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" target="FEkz8eaZDI-MXmy_pDGx-38">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="2424.5" y="1839" as="sourcePoint" />
+            <mxPoint x="1909.99" y="4199" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-38" target="FEkz8eaZDI-MXmy_pDGx-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-38" value="&amp;nbsp;duCfgParam.macCellCfg.initialDlBwp()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2310" y="1883" width="229" height="39" as="geometry" />
+          <mxGeometry x="1795.49" y="4243" width="229" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-39" value="&amp;nbsp;duCfgParam.macCellCfg.initialUlBwp()" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2310" y="1960.5" width="229" height="39" as="geometry" />
+          <mxGeometry x="1795.49" y="4320.5" width="229" height="39" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=18;" edge="1" parent="1" source="FEkz8eaZDI-MXmy_pDGx-40" target="FEkz8eaZDI-MXmy_pDGx-36">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FEkz8eaZDI-MXmy_pDGx-40" value="duCfgParam.macCellCfg.plmnInfoList.snssai" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-          <mxGeometry x="2299.5" y="1720" width="250" height="39" as="geometry" />
+          <mxGeometry x="1784.99" y="4080" width="250" height="39" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
